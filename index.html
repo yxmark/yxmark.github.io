@@ -103,20 +103,20 @@
 								<header>
 									<h2>Contact Me</h2>
 								</header>
-								<form action="#" method="post">
+								<form action="#contactform" method="post">
 									<div>
 										<div class="row">
 											<div class="6u 12u$(mobile)">
-												<input type="text" name="name" placeholder="Name" />
+												<input type="text" name="entry.2005620554" id="entry.2005620554" placeholder="Name" />
 											</div>
 											<div class="6u$ 12u$(mobile)">
-												<input type="text" name="email" placeholder="Email" />
+												<input type="text" name="entry.1045781291" id="entry.1045781291" placeholder="Email" />
 											</div>
 											<div class="12u$">
-												<input type="text" name="subject" placeholder="Subject" />
+												<input type="text" name="entry.1065046570" id="entry.1065046570" placeholder="Subject" />
 											</div>
 											<div class="12u$">
-												<textarea name="message" placeholder="Message" rows="8"></textarea>
+												<textarea name="entry.839337160" id="entry.839337160" placeholder="Message" rows="8"></textarea>
 											</div>
 											<div class="12u$">
 												<input type="submit" value="Send Message" />
@@ -145,5 +145,12 @@
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 			<script type="text/javascript" opacity='0.7'src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+
+			<script type="text/javascript">
+				$('#contactform').on('submit', function(e) {
+				  $('#contactform *').fadeOut(2000);
+				  $('#contactform').prepend('Your submission has been processed...');
+				  });
+			</script>
 	</body>
 </html>
